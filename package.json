@@ -1,0 +1,19 @@
+{
+  "name": "reviews-api-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "pm2 start server/index.js -i max",
+    "stop": "pm2 stop server/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cassandra-driver": "^4.6.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "pm2": "^4.5.4"
+  }
+}
