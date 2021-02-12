@@ -1,4 +1,4 @@
-require('newrelic');
+//const newrelic = require('newrelic');
 const express = require('express');
 const cors = require('cors');
 const Model = require('./db/model.js');
@@ -9,6 +9,8 @@ M.connect();
 const app = express();
 
 app.use(cors());
+
+app.use(express.static(__dirname));
 
 app.get('/api/reviews/:productid', (req, res) => {
   M.getReviews(req.params.productid)
